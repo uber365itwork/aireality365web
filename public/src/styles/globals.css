@@ -1,0 +1,318 @@
+@custom-variant dark (&:is(.dark *));
+
+/* AI Reality 365 Design Tokens */
+:root {
+  /* Base Font Size */
+  --font-size: 16px;
+  
+  /* AI365 Color Variables - Light Mode */
+  --ai365-bg: #F8FAFC;
+  --ai365-surface: rgba(255, 255, 255, 0.8);
+  --ai365-primary: #4F46E5;
+  --ai365-secondary: #06B6D4;
+  --ai365-accent-violet: #A855F7;
+  --ai365-success: #10B981;
+  --ai365-warning: #F59E0B;
+  --ai365-error: #EF4444;
+  
+  /* Neutrals */
+  --ai365-neutral-50: #F8FAFC;
+  --ai365-neutral-100: #E5E7EB;
+  --ai365-neutral-200: #D1D5DB;
+  --ai365-neutral-400: #9CA3AF;
+  --ai365-neutral-500: #6B7280;
+  --ai365-neutral-700: #374151;
+  --ai365-neutral-900: #111827;
+  
+  /* Mapped to shadcn system */
+  --background: #F8FAFC;
+  --foreground: #111827;
+  --card: rgba(255, 255, 255, 0.8);
+  --card-foreground: #111827;
+  --popover: rgba(255, 255, 255, 0.95);
+  --popover-foreground: #111827;
+  --primary: #4F46E5;
+  --primary-foreground: #ffffff;
+  --secondary: #06B6D4;
+  --secondary-foreground: #ffffff;
+  --muted: #E5E7EB;
+  --muted-foreground: #6B7280;
+  --accent: #A855F7;
+  --accent-foreground: #ffffff;
+  --destructive: #EF4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.08);
+  --input: transparent;
+  --input-background: rgba(255, 255, 255, 0.5);
+  --switch-background: #D1D5DB;
+  --ring: #4F46E5;
+  
+  /* Radius tokens */
+  --radius: 1rem;
+  --radius-8: 0.5rem;
+  --radius-16: 1rem;
+  --radius-24: 1.5rem;
+  --radius-32: 2rem;
+  
+  /* Spacing scale */
+  --space-4: 0.25rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-20: 1.25rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-40: 2.5rem;
+  --space-48: 3rem;
+  --space-64: 4rem;
+  --space-80: 5rem;
+  --space-96: 6rem;
+  
+  /* Typography weights */
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-normal: 400;
+  
+  /* Chart colors */
+  --chart-1: #4F46E5;
+  --chart-2: #06B6D4;
+  --chart-3: #A855F7;
+  --chart-4: #10B981;
+  --chart-5: #F59E0B;
+  
+  /* Sidebar */
+  --sidebar: #ffffff;
+  --sidebar-foreground: #111827;
+  --sidebar-primary: #4F46E5;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #F8FAFC;
+  --sidebar-accent-foreground: #111827;
+  --sidebar-border: #E5E7EB;
+  --sidebar-ring: #4F46E5;
+}
+
+.dark {
+  /* AI365 Color Variables - Dark Mode */
+  --ai365-bg: #0F172A;
+  --ai365-surface: rgba(17, 24, 39, 0.8);
+  --ai365-primary: #4F46E5;
+  --ai365-secondary: #06B6D4;
+  --ai365-accent-violet: #A855F7;
+  
+  /* Mapped to shadcn system */
+  --background: #0F172A;
+  --foreground: #F8FAFC;
+  --card: rgba(17, 24, 39, 0.8);
+  --card-foreground: #F8FAFC;
+  --popover: rgba(17, 24, 39, 0.95);
+  --popover-foreground: #F8FAFC;
+  --primary: #4F46E5;
+  --primary-foreground: #ffffff;
+  --secondary: #06B6D4;
+  --secondary-foreground: #ffffff;
+  --muted: #374151;
+  --muted-foreground: #9CA3AF;
+  --accent: #A855F7;
+  --accent-foreground: #ffffff;
+  --destructive: #EF4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.05);
+  --input-background: rgba(255, 255, 255, 0.05);
+  --switch-background: #374151;
+  --ring: #4F46E5;
+  
+  --sidebar: #111827;
+  --sidebar-foreground: #F8FAFC;
+  --sidebar-primary: #4F46E5;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1F2937;
+  --sidebar-accent-foreground: #F8FAFC;
+  --sidebar-border: #374151;
+  --sidebar-ring: #4F46E5;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  /* Glassmorphism utilities */
+  .glass-surface {
+    background: var(--ai365-surface);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  
+  .glass-frost {
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+  
+  /* Gradient utilities */
+  .gradient-hero {
+    background: linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%);
+  }
+  
+  .gradient-orbit {
+    background: radial-gradient(circle at center, #A855F7 0%, #4F46E5 100%);
+  }
+  
+  /* Shadow utilities */
+  .elevation-1 {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+  
+  .elevation-2 {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+  }
+  
+  .dark .elevation-1 {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  .dark .elevation-2 {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.4);
+  }
+  
+  .glow-secondary {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+  }
+  
+  /* Animation utilities */
+  @keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 3s infinite linear;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 100%
+    );
+    background-size: 1000px 100%;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
